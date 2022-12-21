@@ -18,6 +18,7 @@ body{
     color: rgb(112, 112, 112);
     vertical-align: super;
 }
+
 /* CONTAINER  */
 #container{
     height: 95vh;
@@ -126,6 +127,25 @@ li span#time{
     background-image: url('../img/mine.jpg');
     height: calc(100% - 60px);
     position: relative;
+}
+
+.message{
+    width: 30%;
+    border-radius: 5px;
+    padding: .75rem;
+    font-size: .8rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.message.sent{
+    background-color: rgb(213,249,186);
+    left: calc(70% - 5rem)
+}
+
+.message.received{
+    background-color: white;
+    left: 5rem;
 }
 /* SEND-MESSAGE  */
 #send-message{
