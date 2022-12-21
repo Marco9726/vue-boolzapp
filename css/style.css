@@ -4,3 +4,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.debug{
+    border: 1px solid red;
+}
+
+body{
+    background: linear-gradient(to top, #D1DBDB , #DDDBD1 85%, #009688 85%);
+    height: 100vh;
+}
+
+#container{
+    height: 95vh;
+    width: 80vw;
+    margin: 2.5vh auto;
+}
