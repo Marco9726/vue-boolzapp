@@ -87,6 +87,7 @@ body{
 #search nav input{
     font-size: .7rem;
 }
+
 /* contacts list  */
 #contacts-area ul img{
     height: 50px;
@@ -118,4 +119,20 @@ li span#time{
 /* DX CHAT-AREA */
 #chat-area{
     width: 65%;
+}
+/* CHAT-MAIN */
+#chat-main{
+    background-image: url('../img/mine.jpg');
+    height: calc(100% - 60px);
+    position: relative;
+}
+/* SEND-MESSAGE  */
+#send-message{
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255,255,255,0.5);
+    
 }
