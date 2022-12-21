@@ -12,21 +12,48 @@
     <body>
         <div id="app">
             <!-- CONTAINER  -->
-            <div id="container" class="debug">
+            <div id="container">
                 <!-- ROW  -->
                 <div class="row w-100 h-100 m-0">
                     <!-- contacts  -->
-                    <div id="contacs-area" class="h-100 debug p-0 bg-white">
-                        <div id="contacs-header" class="debug ">
+                    <div id="contacts-area" class="h-100  p-0 bg-white">
+                        <!-- contacts header  -->
+                        <div class="contacts header  d-flex justify-content-between align-items-center">
+                            <div id="my-profile">
+                                <img src="./img/avatar_io.jpg" alt="">
+                                <span class="name">Sofia</span>
+                            </div>
+                            <div class="icons-list">
+                                <ul class="list-unstyled d-flex m-0 pe-2">
+                                    <li><i class="fa-solid fa-circle-notch"></i></li>
+                                    <li><i class="fa-solid fa-message mx-3"></i></li>
+                                    <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div id="notifications" class="debug">
+                        <!-- notification  -->
+                        <div id="notifications" class="d-flex py-2 ps-3">
+                            <div id="bell" class="d-flex justify-content-center align-items-center me-2">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div>
+                                <span>Ricevi notifiche di nuovi messaggi</span><br>
+                                <a href="#" class="text-small-grey">Attiva notifiche desktop</a>
+                            </div>
                         </div>
-                        <div id="search" class="debug">
+                        <!-- searchbar  -->
+                        <div id="search" class="p-1 bg-light">    
+                            <nav class="input-group">
+                                <span id="glass" class="input-group-text bg-white h-100 d-flex justify-content-center"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="text" class="form-control h-100" placeholder="Cerca o inizia una nuova chat">
+                            </nav>
+
                         </div>
-                        <div id="contacs-list" class="bg-white">
-                            <ul class="ps-3">
-                                <li v-for="user in contacts" class="list-unstyled debug py-2 d-flex position-relative">
-                                    <div id="user-photo">
+                        <!-- contacts list  -->
+                        <div id="contacts-list" class="bg-white">
+                            <ul class="p-0">
+                                <li v-for="user in contacts" class="list-unstyled py-2 d-flex position-relative">
+                                    <div id="user-photo" class="ps-3">
                                         <img :src="`./img/avatar${user.avatar}.jpg`" alt="user.name" class="me-2">
                                     </div>
                                     <div id="user-name">
@@ -41,7 +68,7 @@
                     </div>
                     <!-- chat  -->
                     <div id="chat-area" class="h-100 debug p-0">
-                        <div id="chat-header" class="debug">
+                        <div  class="chat header debug">
 
                         </div>
                     </div>
