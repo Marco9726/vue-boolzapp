@@ -50,6 +50,10 @@ body{
     width: 35%;
 }
 
+#contacts-area .header{
+    border-right:1px solid lightgrey;
+}
+
 /* notifications  */
 #notifications{
     background-color: rgb(142,218,251);
@@ -65,9 +69,6 @@ body{
 }
 
 /* nav con searchbar  */
-#search{
-
-}
 #search nav{
     height: 1.75rem;
 }
@@ -133,6 +134,15 @@ li span#time{
     position: absolute;
     bottom: 0;
     backdrop-filter: blur(2px);
-    background-color: rgba(255,255,255,0.5);
-    
+    background-color: rgba(255,255,255,0.5); 
+}
+
+#send-message i{
+    font-size: 1.25rem;
+    color: grey;
+}
+
+#send-message input{
+    border: none;
+    font-size: .8rem;
 }
