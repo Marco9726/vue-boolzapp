@@ -11,11 +11,49 @@
 
 body{
     background: linear-gradient(to top, #D1DBDB , #DDDBD1 85%, #009688 85%);
-    height: 100vh;
 }
-
+/* CONTAINER  */
 #container{
     height: 95vh;
     width: 80vw;
     margin: 2.5vh auto;
+}
+/* SX CONTACS */
+#contacs-area{
+    width: 35%;
+}
+#contacs-header{
+    height: 60px;
+}
+#notifications{
+    height: 65px;
+}
+#search{
+    height: 45px;
+}
+
+#contacs-area ul img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#contacs-list li span{
+    font-size: .7rem;
+    color: rgb(190, 190, 190);
+    vertical-align: super;
+}
+
+li span#time{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+}
+/* DX CHAT-AREA */
+#chat-area{
+    width: 65%;
+}
+
+#chat-header{
+    height: 60px;
 }
