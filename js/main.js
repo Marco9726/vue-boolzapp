@@ -170,5 +170,14 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        //creo il metodo per visualizzare l'orario in formato 'ora:minuto'
+        messageDate(index){
+            // seleziono la proprietà 'date' nell'array attivo (chatActive) e divido l'ora dalla data, poi prendo in considerazione lora [1]
+            const timeMessage = this.contacts[this.chatActive].messages[index].date.split(' ')[1].split(':')
+            //ritorno i primi due elementi dell'array (ora e minuti) con i due punti in mezzo
+            return timeMessage[0] + ':' + timeMessage[1];
+        }
     }
 }).mount('#app')

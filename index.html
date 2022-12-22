@@ -91,9 +91,9 @@
                         <!-- chat main -->
                         <div id="chat-main" class="pt-5">
                             
-                            <div v-for="(item) in contacts[chatActive].messages" class="message" :class="(item.status ==='sent') ? 'sent' : 'received'">
+                            <div v-for="(item,index) in contacts[chatActive].messages" class="message" :class="(item.status ==='sent') ? 'sent' : 'received'">
                                 {{item.message}}
-                                
+                                <span class="time-message">{{messageDate(index)}}</span>              
                             </div>
                             
 

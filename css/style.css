@@ -147,6 +147,14 @@ li span#time{
     background-color: white;
     left: 5rem;
 }
+
+.message .time-message{
+    color: rgb(180, 180, 180);
+    font-size: .5rem;
+    position: absolute;
+    bottom: .2rem;
+    right: .2rem;
+}
 /* SEND-MESSAGE  */
 #send-message{
     height: 60px;
