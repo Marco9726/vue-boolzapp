@@ -183,7 +183,19 @@ createApp({
         //creo il metodo per cambiare il valore di chatActive in base all'index del v-for
         chooseChat(index){
             this.chatActive = index;
+        },
+        //creo metodo per mandare un nuovo messaggio nella chat
+        sendMessage(){
+            //nuovo oggetto che ha come valore di 'message' newMessage
+            let newObject = {
+                date: '10/10/2020 16:00:00',
+                message: this.newMessage,
+                status: 'sent'
+            }
+            //inserisco quest'oggetto nell'array messages della chat attiva
+            this.contacts[this.chatActive].messages.push(newObject)
         }
 
     }
 }).mount('#app')
+
