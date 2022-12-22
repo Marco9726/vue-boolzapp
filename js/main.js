@@ -194,6 +194,18 @@ createApp({
             }
             //inserisco quest'oggetto nell'array messages della chat attiva
             this.contacts[this.chatActive].messages.push(newObject)
+        },
+        answerMessage(){
+            setTimeout(() => {
+                let answer = {
+                    date: '10/10/2020 16:00:00',
+                    message: 'ok',
+                    status: 'received'
+                }
+                this.contacts[this.chatActive].messages.push(answer)
+
+            }, 1000)
+
         }
 
     }
