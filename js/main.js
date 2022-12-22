@@ -186,9 +186,10 @@ createApp({
         },
         //creo metodo per mandare un nuovo messaggio nella chat
         sendMessage(){
+            const dt = luxon.DateTime;
             //nuovo oggetto che ha come valore di 'message' newMessage
             let newObject = {
-                date: '10/10/2020 16:00:00',
+                date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                 message: this.newMessage,
                 status: 'sent'
             }
@@ -197,15 +198,15 @@ createApp({
         },
         answerMessage(){
             setTimeout(() => {
+                const dt = luxon.DateTime;
                 let answer = {
-                    date: '10/10/2020 16:00:00',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: 'ok',
                     status: 'received'
                 }
                 this.contacts[this.chatActive].messages.push(answer)
 
             }, 1000)
-
         }
 
     }
