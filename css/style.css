@@ -131,7 +131,7 @@ li span#time{
 
 .message{
     width: 30%;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: .75rem;
     font-size: .8rem;
     position: relative;

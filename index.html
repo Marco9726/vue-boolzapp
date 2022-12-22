@@ -91,12 +91,11 @@
                         <!-- chat main -->
                         <div id="chat-main" class="pt-5">
                             
-                            <div class="message sent">
-                                ciaociao
+                            <div v-for="(item) in contacts[chatActive].messages" class="message" :class="(item.status ==='sent') ? 'sent' : 'received'">
+                                {{item.message}}
+                                
                             </div>
-                            <div class="message received">
-                                ciaociao
-                            </div>
+                            
 
                          <!-- send-message  -->
                             <div id="send-message">

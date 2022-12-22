@@ -5,6 +5,7 @@ const {
 createApp({
     data(){
         return {
+            chatActive: 0,
             contacts: [
                 {
                     name: 'Michele',
