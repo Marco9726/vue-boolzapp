@@ -6,6 +6,7 @@ createApp({
     data(){
         return {
             chatActive: 0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -179,6 +180,7 @@ createApp({
             //ritorno i primi due elementi dell'array (ora e minuti) con i due punti in mezzo
             return timeMessage[0] + ':' + timeMessage[1];
         },
+        //creo il metodo per cambiare il valore di chatActive in base all'index del v-for
         chooseChat(index){
             this.chatActive = index;
         }

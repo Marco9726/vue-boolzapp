@@ -52,7 +52,7 @@
                         <!-- contacts list  -->
                         <div id="contacts-list" class="bg-white">
                             <ul class="p-0">
-                                <li v-for="(user,index) in contacts" class="list-unstyled py-2 d-flex position-relative" @click="chooseChat(index)">
+                                <li v-for="(user,index) in contacts" class="list-unstyled py-2 d-flex position-relative" @click="chooseChat(index)" :class="(index === chatActive) ? 'backgrey' : ''" >
                                     <div id="user-photo" class="ps-3">
                                         <img :src="`./img/avatar${user.avatar}.jpg`" alt="user.name" class="me-2">
                                     </div>
