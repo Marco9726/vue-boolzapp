@@ -173,6 +173,18 @@ createApp({
             ]
         }
     },
+    // computed: {
+    //     filterContacts(){
+    //         if (this.search != ''){
+
+    //         }
+    //         let filteredChat = this.contacts.filter((user) => {
+    //             return user.name.includes(this.search)
+    //         })
+
+    //         return filteredChat
+    //     }
+    // },
     methods: {
         //creo il metodo per visualizzare l'orario in formato 'ora:minuto'
         messageTime(index){
@@ -211,6 +223,20 @@ createApp({
                 this.contacts[this.chatActive].messages.push(answer)
 
             }, 1000)
+
+        },
+        //creo il metodo per filtrare i contatti
+        filterContacts(){
+            //creo un vuovo array 'gemello' di contacts
+            this.contacts = this.contacts.map((contact) => { 
+                //se il name minuscolo include il search minusolo la prorietà del contact è sivible, altrimenti il contrario
+                if(contact.name.toLowerCase().includes( this.search.toLowerCase() )){
+                    contact.visible = true;
+                }else {
+                    contact.visible = false;
+                }
+                return contact
+            })
         }
 
     }
