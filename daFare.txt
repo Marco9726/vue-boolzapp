@@ -1,0 +1,2 @@
+1 - cambiare orario ultimo accesso
+2 - visualizzare lista emoticon al click della faccina

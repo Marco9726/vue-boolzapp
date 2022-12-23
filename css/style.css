@@ -50,6 +50,11 @@ i{
     font-size: 1.1rem;
 }
 
+.header i:hover{
+    color: #009688;
+    text-shadow: 2px 2px 4px #c1c1c1;
+}
+
 /* SX contacts */
 #contacts-area{
     width: 35%;
@@ -101,6 +106,10 @@ i{
     border-radius: 50%;
 }
 
+#contacts-list li{
+    cursor: pointer;
+}
+
 #contacts-list li:not(:last-child){
     border-bottom: 1px solid rgb(235, 235, 235);
 }
@@ -129,12 +138,13 @@ li span#time{
 /* DX CHAT-AREA */
 #chat-area{
     width: 65%;
+    position: relative;
 }
 /* CHAT-MAIN */
 #chat-main{
     background-image: url('../img/mine.jpg');
-    height: calc(100% - 60px);
-    position: relative;
+    height: calc(100% - 120px);
+    overflow-y: auto;
 }
 
 .message{
@@ -167,7 +177,6 @@ li span#time{
 #send-message{
     height: 60px;
     width: 100%;
-    position: absolute;
     bottom: 0;
     backdrop-filter: blur(2px);
     background-color: rgba(255,255,255,0.5); 
@@ -181,4 +190,8 @@ li span#time{
 #send-message input{
     border: none;
     font-size: .8rem;
+}
+
+#send-message #smile i:hover{
+    color: rgb(235, 194, 11);
 }

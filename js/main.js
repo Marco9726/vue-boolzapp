@@ -7,6 +7,7 @@ createApp({
         return {
             chatActive: 0,
             newMessage: '',
+            search: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -187,7 +188,7 @@ createApp({
         //creo metodo per mandare un nuovo messaggio nella chat
         sendMessage(){
             const dt = luxon.DateTime;
-            //nuovo oggetto che ha come valore di 'message' newMessage
+            //nuovo oggetto che ha come valore di 'message' newMessage, e come 'date' la data attuale tramite luxon
             let newObject = {
                 date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                 message: this.newMessage,
@@ -196,14 +197,17 @@ createApp({
             //inserisco quest'oggetto nell'array messages della chat attiva
             this.contacts[this.chatActive].messages.push(newObject)
         },
+        //creo metodo del messaggio di risposta dopo 1 secondo
         answerMessage(){
             setTimeout(() => {
                 const dt = luxon.DateTime;
+                 //nuovo oggetto che ha come valore di 'message' ok, e come 'date' la data attuale tramite luxon
                 let answer = {
                     date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: 'ok',
                     status: 'received'
                 }
+                //inserisco quest'oggetto nell'array messages della chat attiva
                 this.contacts[this.chatActive].messages.push(answer)
 
             }, 1000)
