@@ -188,7 +188,7 @@ createApp({
     methods: {
         //creo il metodo per visualizzare l'orario in formato 'ora:minuto'
         messageTime(index){
-            // seleziono la proprietà 'date' nell'array attivo (chatActive) e divido l'ora dalla data, poi prendo in considerazione lora [1]
+            // seleziono la proprietà 'date' nell'array attivo (chatActive) e divido l'ora dalla data, poi prendo in considerazione l'ora [1]
             const timeMessage = this.contacts[this.chatActive].messages[index].date.split(' ')[1].split(':')
             //ritorno i primi due elementi dell'array (ora e minuti) con i due punti in mezzo
             return timeMessage[0] + ':' + timeMessage[1];
@@ -229,7 +229,7 @@ createApp({
         filterContacts(){
             //creo un vuovo array 'gemello' di contacts
             this.contacts = this.contacts.map((contact) => { 
-                //se il name minuscolo include il search minusolo la prorietà del contact è sivible, altrimenti il contrario
+                //se il name minuscolo include il search minuscolo, la prorietà del contact è visibile, altrimenti il contrario
                 if(contact.name.toLowerCase().includes( this.search.toLowerCase() )){
                     contact.visible = true;
                 }else {
@@ -237,8 +237,13 @@ createApp({
                 }
                 return contact
             })
-        }
+        },
 
     }
 }).mount('#app')
+
+
+
+
+
 
