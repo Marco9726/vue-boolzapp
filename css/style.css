@@ -173,6 +173,13 @@ li span#time{
     bottom: .2rem;
     right: .2rem;
 }
+
+.message .down-arrow{
+    color: rgb(180, 180, 180);
+    position: absolute;
+    top: .1rem;
+    right: .3rem;
+}
 /* SEND-MESSAGE  */
 #send-message{
     height: 60px;

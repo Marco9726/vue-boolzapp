@@ -238,6 +238,18 @@ createApp({
                 return contact
             })
         },
+        //creo il metodo per mostrare l'arrow nel messaggio all'over di quest'ultimo
+        showArrow(index){
+            let arrows = document.getElementsByClassName('down-arrow');
+            //rimuovo la classe 'd-none' all'arrow in posizione index
+            arrows[index].classList.remove('d-none')
+        },
+        //creo il metodo per nascondere l'arrow nel messaggio al leave di quest'ultimo
+        hideArrow(index){
+            let arrows = document.getElementsByClassName('down-arrow');
+            //aggiungo la classe 'd-none' all'arrow in posizione index
+            arrows[index].classList.add('d-none')
+        }
 
     }
 }).mount('#app')

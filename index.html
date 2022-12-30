@@ -92,9 +92,10 @@
                         <!-- chat main -->
                         <div id="chat-main" class="pt-5">
                             
-                            <div v-for="(item,index) in contacts[chatActive].messages" class="message" :class="(item.status ==='sent') ? 'sent' : 'received'">
+                            <div v-for="(item,index) in contacts[chatActive].messages" class="message" :class="(item.status ==='sent') ? 'sent' : 'received'" @mouseover="showArrow(index)" @mouseleave="hideArrow(index)">
                                 {{item.message}}
-                                <span class="time-message">{{messageTime(index)}}</span>              
+                                <span class="time-message">{{messageTime(index)}}</span>         
+                                <span class="down-arrow d-none"><i class="fa-solid fa-angle-down"></i></span>     
                             </div>
                             
                         </div>
@@ -120,8 +121,6 @@
                     </div>
 
                 </div>
-
-
 
             </div>
 
