@@ -52,8 +52,10 @@
                         <!-- contacts list  -->
                         <div id="contacts-list" class="bg-white">
                             <ul class="p-0">
+                                <!-- v.for dei contatti (user) nell'array principale (contacts) -->         <!-- se l'iterazione attuale è uguale al valore di chatActive, aggiungo classe backgrey -->
                                 <li v-for="(user,index) in contacts" class="list-unstyled" @click="chooseChat(index)" :class="(index === chatActive) ? 'backgrey' : ''">
-                                    <div class="li py-2 d-flex position-relative" v-if="user.visible">
+                                    <!-- v-if, mostro il contenuto se la proprietà visibile dell'user è uguale a true  -->
+                                    <div v-if="user.visible" class="li py-2 d-flex position-relative">
                                         <div id="user-photo" class="ps-3">
                                             <img :src="`./img/avatar${user.avatar}.jpg`" alt="user.name" class="me-2">
                                         </div>
@@ -91,19 +93,23 @@
                         </div>
                         <!-- chat main -->
                         <div id="chat-main" class="pt-5">
-                            
-                            <div v-for="(item,index) in contacts[chatActive].messages" class="message" :class="(item.status ==='sent') ? 'sent' : 'received'" @mouseover="showArrow(index)" @mouseleave="hideArrow(index)">
-                                {{item.message}}
-                                <span class="time-message">{{messageTime(index)}}</span>         
-                                <span class="down-arrow d-none"><i class="fa-solid fa-angle-down" @click="dropdownMenu(index)"></i></span>   
-                                <div class="drop-menu bg-white w-50 d-none">
-                                    <div>
-                                        <span class="p-2">Message info</span>
-                                    </div>
-                                    <div>
-                                        <span class="p-2">Delete message</span>
-                                    </div>
-                                </div>  
+                            <!-- v-for degli item nella chat attiva  -->
+                            <div v-for="(item,index) in contacts[chatActive].messages" @mouseover="showArrow(index)" @mouseleave="hideArrow(index)">
+                                <!-- v-if, se la proprietà delete è false (!item.delete) mostro il contenuto  -->
+                                <div v-if="!item.delete" class="message" :class="(item.status ==='sent') ? 'sent' : 'received'">
+                                    {{item.message}}
+                                    <span class="time-message">{{messageTime(index)}}</span>         
+                                    <span class="down-arrow d-none"><i class="fa-solid fa-angle-down" @click="dropdownMenu(index)"></i></span>   
+                                    <div class="drop-menu bg-white w-50 d-none">
+                                        <div>
+                                            <span class="p-2">Message info</span>
+                                        </div>
+                                        <!-- click che invoca la funzione per eliminare il messaggio (facendo diventare delete = true) -->
+                                        <div @click="deleteMessage(item)">
+                                            <span class="p-2">Delete message</span>
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
                             
                         </div>
