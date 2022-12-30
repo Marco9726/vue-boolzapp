@@ -180,6 +180,24 @@ li span#time{
     top: .1rem;
     right: .3rem;
 }
+
+.message .drop-menu{
+    position: absolute;
+    box-shadow: 0px 2px 5px rgb(180, 180, 180);
+    color: grey;
+    z-index: 1;
+    right: .3rem;
+    top: 50%;
+}
+
+.message .drop-menu div{
+    line-height: 2rem;
+    vertical-align: middle;
+}
+.message .drop-menu div:hover{
+    background-color: rgb(246,246,246);
+    cursor: pointer;
+}
 /* SEND-MESSAGE  */
 #send-message{
     height: 60px;

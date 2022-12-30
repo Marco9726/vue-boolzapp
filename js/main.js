@@ -240,15 +240,22 @@ createApp({
         },
         //creo il metodo per mostrare l'arrow nel messaggio all'over di quest'ultimo
         showArrow(index){
-            let arrows = document.getElementsByClassName('down-arrow');
+            const arrows = document.getElementsByClassName('down-arrow');
             //rimuovo la classe 'd-none' all'arrow in posizione index
             arrows[index].classList.remove('d-none')
         },
         //creo il metodo per nascondere l'arrow nel messaggio al leave di quest'ultimo
         hideArrow(index){
-            let arrows = document.getElementsByClassName('down-arrow');
+            const arrows = document.getElementsByClassName('down-arrow');
             //aggiungo la classe 'd-none' all'arrow in posizione index
             arrows[index].classList.add('d-none')
+        },
+
+        //creo il metodo per visualizzare il menu al click dell'arrow
+        dropdownMenu(index){
+            const menuCollection = document.getElementsByClassName('drop-menu');
+            //rimuovo la classe 'd-none' al menu in posizione index
+            menuCollection[index].classList.toggle('d-none');
         }
 
     }

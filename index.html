@@ -95,7 +95,15 @@
                             <div v-for="(item,index) in contacts[chatActive].messages" class="message" :class="(item.status ==='sent') ? 'sent' : 'received'" @mouseover="showArrow(index)" @mouseleave="hideArrow(index)">
                                 {{item.message}}
                                 <span class="time-message">{{messageTime(index)}}</span>         
-                                <span class="down-arrow d-none"><i class="fa-solid fa-angle-down"></i></span>     
+                                <span class="down-arrow d-none"><i class="fa-solid fa-angle-down" @click="dropdownMenu(index)"></i></span>   
+                                <div class="drop-menu bg-white w-50 d-none">
+                                    <div>
+                                        <span class="p-2">Message info</span>
+                                    </div>
+                                    <div>
+                                        <span class="p-2">Delete message</span>
+                                    </div>
+                                </div>  
                             </div>
                             
                         </div>
