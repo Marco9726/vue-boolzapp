@@ -115,10 +115,50 @@
                         </div>
                         <!-- send-message  -->
                         <div id="send-message">
-                            <div class="row py-2 px-4 h-100 align-items-center">
+                            <div class="row py-2 px-4 h-100 align-items-center position-relative">
                                 <div class="col flex-grow-0">
+                                    <div id="emoji-container" class="d-none">
+                                        <div class="row flex-wrap p-3 gy-2">
+                                            <div class="cell"><i class="fa-solid fa-face-smile"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-tired"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-surprise"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-smile-wink"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-smile-beam"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-sad-tear"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-sad-cry"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-rolling-eyes"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-meh-blank"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-meh"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-laugh-wink"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-laugh-beam"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-laugh-squint"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-laugh"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-kiss-wink-heart"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-kiss-beam"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-kiss"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-wink"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-wide"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-tongue-wink"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-tongue-squint"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-tongue"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-tears"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-stars"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-squint-tears"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-squint"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-hearts"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-beam-sweat"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin-beam"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grin"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-grimace"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-frown-open"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-frown"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-flushed"></i></div>
+                                            <div class="cell"><i class="fa-solid fa-face-dizzy"></i></div>
+                                        </div>
+                                    </div>
                                     <div id="smile" class="mx-2">
-                                        <i class="fa-regular fa-face-smile"></i>
+                                        <!-- click che invoca la funzione per mostrare/nascondere l'emoji container -->
+                                        <i class="fa-regular fa-face-smile" @click="showEmoji"></i>
                                     </div>
                                 </div>
                                 <div class="col flex-grow-1 h-100">

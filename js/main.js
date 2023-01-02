@@ -274,7 +274,7 @@ createApp({
         //creo il metodo per visualizzare il menu al click dell'arrow
         dropdownMenu(index){
             const menuCollection = document.getElementsByClassName('drop-menu');
-            //rimuovo la classe 'd-none' al menu in posizione index
+            //rimuovo/aggiungo la classe 'd-none' al menu in posizione index
             menuCollection[index].classList.toggle('d-none');
         },
         //creo il metodo per eliminare il messaggio
@@ -284,6 +284,12 @@ createApp({
                 //diventa true
                 item.delete = true;
             }
+        },
+        //creo il metodo per visualizzare l'emoji container al click dello smile
+        showEmoji(){
+            const emojiContainer = document.getElementById('emoji-container');
+            //rimuovo/aggiungo la classe 'd-none' all'emoji container
+            emojiContainer.classList.toggle('d-none')
         }
 
     }

@@ -218,5 +218,31 @@ li span#time{
 }
 
 #send-message #smile i:hover{
-    color: rgb(235, 194, 11);
+    color: rgb(243, 188, 26);
+}
+
+/* emoji  */
+
+#send-message #emoji-container{
+    z-index: 2;
+    width: 300px;
+    position: absolute;
+    bottom: 100%;
+    right: 74.3%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255,0.8); 
+    border-radius: .5rem;
+    box-shadow: 0px 5px 5px rgba(144, 144, 144, 0.5);
+}
+
+#emoji-container .cell{
+    width: calc(100% / 7);
+}
+
+#emoji-container .cell i{
+    color: rgb(243,188,26);
+}
+
+#emoji-container .cell i:hover{
+    color: rgb(255, 215, 75);
 }
