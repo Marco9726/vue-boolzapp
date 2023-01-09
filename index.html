@@ -76,7 +76,7 @@
                         <div class="chat header d-flex justify-content-between align-items-center">
                             <div class="d-flex">
                                 <div>
-                                    <img :src="`./img/avatar${contacts[chatActive].avatar}.jpg`" alt="" class="me-2">
+                                    <img :src="`./img/avatar${contacts[chatActive].avatar}.jpg`" :alt="contacts[chatActive].name" class="me-2">
                                 </div>
                                 <div>
                                     <span class="name">{{contacts[chatActive].name}}</span>
@@ -179,6 +179,7 @@
             </div>
 
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.3/build/global/luxon.min.js"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="./js/main.js"></script>

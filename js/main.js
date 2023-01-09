@@ -234,14 +234,17 @@ createApp({
         answerMessage(){
             setTimeout(() => {
                 const dt = luxon.DateTime;
-                 //nuovo oggetto che ha come valore di 'message' ok, e come 'date' la data attuale tramite luxon
-                let answer = {
-                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
-                    message: 'ok',
-                    status: 'received'
-                }
-                //inserisco quest'oggetto nell'array messages della chat attiva
-                this.contacts[this.chatActive].messages.push(answer)
+                axios.get('https://flynn.boolean.careers/exercises/api/random/sentence').then((result) => {
+                    const answerMessage = result.data.response
+                    //nuovo oggetto che ha come valore di 'message' la frase generata casualmente dall'API, e come 'date' la data attuale tramite luxon
+                    let answer = {
+                        date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                        message: answerMessage,
+                        status: 'received'
+                    }
+                   //inserisco quest'oggetto nell'array messages della chat attiva
+                   this.contacts[this.chatActive].messages.push(answer)
+                })
 
             }, 1000)
 
@@ -291,6 +294,7 @@ createApp({
             //rimuovo/aggiungo la classe 'd-none' all'emoji container
             emojiContainer.classList.toggle('d-none')
         }
+        
 
     }
 }).mount('#app')
